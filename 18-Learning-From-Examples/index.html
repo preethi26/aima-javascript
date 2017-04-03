@@ -1,34 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>18 Learning From Examples</title>
-  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script type="text/javascript" src="../main.js"></script>
- 
-  <script> 
-   $(function(){
-      $('header').load("../header.html"); 
-   });
-   </script>
+  <title>3 Solving Problems By Searching</title>
+
+  <script type="text/javascript" src="./main.js"></script>
+  <script type="text/javascript" src="decisionTreeLearning.js"></script> 
+  <script type="text/javascript" src = "c_decisionTreeLearning.js"></script>
+
 </head>
 <body>
-
   <header>
-  
   </header>
-  
+
   <div class="row">
-    <div class="col-sm-6 col-md-offset-3" id="content">
-      <h1>Learning From Examples</h1>
-      <p>TODO</p>
-
+    <div class="col-sm-6 col-md-10 col-md-offset-1" id="content">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <h2>
+              Decision tree learning
+            </h2>
+            <p>
+                In decision tree learning we build a tree
+            </p>
+            <p>
+                To achieve this, Breadth First Search Algorithm uses a FIFO(First In First Out) Queue.
+                The following graph is explored by a Breadth First Search Algorithm with 'A' as the initial node.
+            </p>
+          </div>
+        </div>
       
+
+       <div class="row">
+          <div class="col-sm-6 col-md-6">
+              <div class='btn btn-primary' id='dtlRestartButton'>Restart
+              </div>
+              <div class = "canvas" id="decisionTreeLearningCanvas" height="300px" >
+                  <div id= " examples">
+                      examples
+                  </div>
+                  <div id = " attributes">
+                      attributes
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-6">
+               <div class="notes">
+                 <p> here tree is shown
+                 </p>
+               </div>
+               <div class="canvas"  id="decisionTreeCanvas" style="background-color:hsl(0, 0%, 90%);padding:15px; width:90%;height:300px;margin-top:4px">
+               </div>
+            </div>
+
+          
+        </div>
+
+
+         <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="notes">
+                <p> Here we see gain value of each attribute </p>
+            </div>
+                <div class = "canvas" id="informationGainCanvas" style="background-color:hsl(0, 0%, 90%);padding:15px; width:90%;height:200px;" >
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6" >
+            <div class="notes">
+                <p> Here we see how each attribute divides the set of examples shown </p>
+            </div>
+            <div class="canvas" id="attributeSplit" style="background-color:hsl(0, 0%, 90%);padding:15px; width:90%;height:200px;">
+              <center>
+                <h4>VALUE CLASSES</h4>
+                  <div id='attributeSplitCanvas' >
+                  </div>
+              </center>
+            </div>
+          </div>
+            
+        </div>
     </div>
-  </div>
-
-  <footer class="container-fluid text-center">
-	<img src="http://aima.cs.berkeley.edu/aima_logo.png"></img>
-  </footer>
-
+   </div>   
+ <footer class="container-fluid text-center">
+ <img src="http://aima.cs.berkeley.edu/aima_logo.png">
+</footer>
 </body>
 </html>
